@@ -33,5 +33,9 @@ def judge_path(path):
             judge_path(os.path.join(path, f))
         
 print('Working Path: {0}'.format(sys.argv[1]))
-judge_path(sys.argv[1])
+try:
+    judge_path(sys.argv[1])
+except Exception as e:
+    print(str(e))
+
 os.system('pause')
